@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dgrtqve4e8llr"]
 
 [ext_resource type="Script" uid="uid://cxhl0teuosir7" path="res://Start.cs" id="1_r305v"]
+[ext_resource type="FontFile" uid="uid://cyqjy16xpv80m" path="res://fonts/Minecraft.ttf" id="2_52bhu"]
 
 [node name="root" type="Control" unique_id=1967368881]
 layout_mode = 3
@@ -20,3 +21,24 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.2123048, 0.21230483, 0.21230477, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=997822605]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Screen" type="Label" parent="VBoxContainer" unique_id=1219723913]
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 2.5
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 80
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=48585054]
+layout_mode = 2

@@ -22,6 +22,12 @@ grow_vertical = 2
 color = Color(0.2123048, 0.21230483, 0.21230477, 1)
 metadata/_edit_use_anchors_ = true
 
+[node name="Banner" type="ColorRect" parent="." unique_id=2090258812]
+layout_mode = 0
+offset_right = 720.0
+offset_bottom = 51.0
+color = Color(0.14509805, 0.14509805, 0.14509805, 1)
+
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=997822605]
 layout_mode = 1
 anchors_preset = 15
@@ -29,6 +35,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=313371718]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "The Meme Calculator"
+horizontal_alignment = 1
 
 [node name="Screen" type="Label" parent="VBoxContainer" unique_id=1219723913]
 layout_mode = 2
@@ -42,3 +54,165 @@ vertical_alignment = 1
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=48585054]
 layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+columns = 5
+
+[node name="1" type="Button" parent="VBoxContainer/GridContainer" unique_id=687856096]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "1"
+
+[node name="2" type="Button" parent="VBoxContainer/GridContainer" unique_id=655536630]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "2"
+
+[node name="3" type="Button" parent="VBoxContainer/GridContainer" unique_id=1833603168]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "3"
+
+[node name="Button5" type="Button" parent="VBoxContainer/GridContainer" unique_id=1066713667]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+
+[node name="ClearButton" type="Button" parent="VBoxContainer/GridContainer" unique_id=594282345]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.92048687, 0.1755741, 0, 1)
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "C"
+
+[node name="4" type="Button" parent="VBoxContainer/GridContainer" unique_id=20732821]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "4"
+
+[node name="5" type="Button" parent="VBoxContainer/GridContainer" unique_id=1631536676]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "5"
+
+[node name="6" type="Button" parent="VBoxContainer/GridContainer" unique_id=1517077801]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "6"
+
+[node name="Multiplication" type="Button" parent="VBoxContainer/GridContainer" unique_id=1953698617]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "*"
+
+[node name="Addition" type="Button" parent="VBoxContainer/GridContainer" unique_id=1778759858]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "+"
+
+[node name="7" type="Button" parent="VBoxContainer/GridContainer" unique_id=980901560]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "7"
+
+[node name="8" type="Button" parent="VBoxContainer/GridContainer" unique_id=335611275]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "8"
+
+[node name="9" type="Button" parent="VBoxContainer/GridContainer" unique_id=1110945143]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "9"
+
+[node name="Division" type="Button" parent="VBoxContainer/GridContainer" unique_id=416216829]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "/"
+
+[node name="Subtraction" type="Button" parent="VBoxContainer/GridContainer" unique_id=1948034168]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "-"
+
+[node name="Button16" type="Button" parent="VBoxContainer/GridContainer" unique_id=1370304004]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+
+[node name="0" type="Button" parent="VBoxContainer/GridContainer" unique_id=1236488796]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "0"
+
+[node name="dot" type="Button" parent="VBoxContainer/GridContainer" unique_id=771081817]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "."
+
+[node name="Button19" type="Button" parent="VBoxContainer/GridContainer" unique_id=1525892572]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+
+[node name="Button20" type="Button" parent="VBoxContainer/GridContainer" unique_id=291265743]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1.347661e-06, 0.9378635, 0.65428084, 1)
+theme_override_fonts/font = ExtResource("2_52bhu")
+theme_override_font_sizes/font_size = 40
+text = "="

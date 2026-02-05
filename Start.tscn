@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dgrtqve4e8llr"]
 
+[ext_resource type="Script" uid="uid://cxhl0teuosir7" path="res://Start.cs" id="1_r305v"]
+
 [node name="root" type="Control" unique_id=1967368881]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_r305v")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=714905771]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2123048, 0.21230483, 0.21230477, 1)
+metadata/_edit_use_anchors_ = true

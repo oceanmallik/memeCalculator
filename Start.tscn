@@ -25,7 +25,7 @@ metadata/_edit_use_anchors_ = true
 [node name="Banner" type="ColorRect" parent="." unique_id=2090258812]
 layout_mode = 0
 offset_right = 720.0
-offset_bottom = 51.0
+offset_bottom = 53.0
 color = Color(0.14509805, 0.14509805, 0.14509805, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=997822605]
@@ -58,7 +58,7 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 4.0
 columns = 5
 
-[node name="1" type="Button" parent="VBoxContainer/GridContainer" unique_id=687856096]
+[node name="b1" type="Button" parent="VBoxContainer/GridContainer" unique_id=687856096]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -66,7 +66,7 @@ theme_override_fonts/font = ExtResource("2_52bhu")
 theme_override_font_sizes/font_size = 40
 text = "1"
 
-[node name="2" type="Button" parent="VBoxContainer/GridContainer" unique_id=655536630]
+[node name="b2" type="Button" parent="VBoxContainer/GridContainer" unique_id=655536630]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -74,7 +74,7 @@ theme_override_fonts/font = ExtResource("2_52bhu")
 theme_override_font_sizes/font_size = 40
 text = "2"
 
-[node name="3" type="Button" parent="VBoxContainer/GridContainer" unique_id=1833603168]
+[node name="b3" type="Button" parent="VBoxContainer/GridContainer" unique_id=1833603168]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -98,7 +98,7 @@ theme_override_fonts/font = ExtResource("2_52bhu")
 theme_override_font_sizes/font_size = 40
 text = "C"
 
-[node name="4" type="Button" parent="VBoxContainer/GridContainer" unique_id=20732821]
+[node name="b4" type="Button" parent="VBoxContainer/GridContainer" unique_id=20732821]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -106,7 +106,7 @@ theme_override_fonts/font = ExtResource("2_52bhu")
 theme_override_font_sizes/font_size = 40
 text = "4"
 
-[node name="5" type="Button" parent="VBoxContainer/GridContainer" unique_id=1631536676]
+[node name="b5" type="Button" parent="VBoxContainer/GridContainer" unique_id=1631536676]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -114,7 +114,7 @@ theme_override_fonts/font = ExtResource("2_52bhu")
 theme_override_font_sizes/font_size = 40
 text = "5"
 
-[node name="6" type="Button" parent="VBoxContainer/GridContainer" unique_id=1517077801]
+[node name="b6" type="Button" parent="VBoxContainer/GridContainer" unique_id=1517077801]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -138,7 +138,7 @@ theme_override_fonts/font = ExtResource("2_52bhu")
 theme_override_font_sizes/font_size = 40
 text = "+"
 
-[node name="7" type="Button" parent="VBoxContainer/GridContainer" unique_id=980901560]
+[node name="b7" type="Button" parent="VBoxContainer/GridContainer" unique_id=980901560]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -146,7 +146,7 @@ theme_override_fonts/font = ExtResource("2_52bhu")
 theme_override_font_sizes/font_size = 40
 text = "7"
 
-[node name="8" type="Button" parent="VBoxContainer/GridContainer" unique_id=335611275]
+[node name="b8" type="Button" parent="VBoxContainer/GridContainer" unique_id=335611275]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -154,7 +154,7 @@ theme_override_fonts/font = ExtResource("2_52bhu")
 theme_override_font_sizes/font_size = 40
 text = "8"
 
-[node name="9" type="Button" parent="VBoxContainer/GridContainer" unique_id=1110945143]
+[node name="b9" type="Button" parent="VBoxContainer/GridContainer" unique_id=1110945143]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -185,7 +185,7 @@ size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_52bhu")
 theme_override_font_sizes/font_size = 40
 
-[node name="0" type="Button" parent="VBoxContainer/GridContainer" unique_id=1236488796]
+[node name="b0" type="Button" parent="VBoxContainer/GridContainer" unique_id=1236488796]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -208,7 +208,7 @@ size_flags_vertical = 3
 theme_override_fonts/font = ExtResource("2_52bhu")
 theme_override_font_sizes/font_size = 40
 
-[node name="Button20" type="Button" parent="VBoxContainer/GridContainer" unique_id=291265743]
+[node name="Equal" type="Button" parent="VBoxContainer/GridContainer" unique_id=291265743]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

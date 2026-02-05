@@ -39,8 +39,64 @@ public partial class Start : Control
         Button dot = GetNode<Button>("VBoxContainer/GridContainer/dot");
         Button clear = GetNode<Button>("VBoxContainer/GridContainer/ClearButton");
 
+        b1.Pressed += () => ButtonPressed(b1);
+        b2.Pressed += () => ButtonPressed(b2);
+        b3.Pressed += () => ButtonPressed(b3);
+        b4.Pressed += () => ButtonPressed(b4);
+        b5.Pressed += () => ButtonPressed(b5);
+        b6.Pressed += () => ButtonPressed(b6);
+        b7.Pressed += () => ButtonPressed(b7);
+        b8.Pressed += () => ButtonPressed(b8);
+        b9.Pressed += () => ButtonPressed(b9);
+        b0.Pressed += () => ButtonPressed(b0);
+
+        plus.Pressed += () => ButtonPressed(plus);
+        minus.Pressed += () => ButtonPressed(minus);
+        devide.Pressed += () => ButtonPressed(devide);
+        multiply.Pressed += () => ButtonPressed(multiply);
+        equal.Pressed += () => ButtonPressed(equal);
+        dot.Pressed += () => ButtonPressed(dot);
+        clear.Pressed += () => ButtonPressed(clear);
 	}
 
+    private void ButtonPressed(Button Button)
+    {
+        string theText = Button.Text;
+
+        if (theText == "+" || theText == "-" || theText == "*" || theText == "/" || theText == "C" || theText == "=")
+        {
+            HandleOperator(theText);
+        }
+        else
+        {
+            HandleNumber(theText);
+        }
+    }
+    private void HandleOperator(string op)
+    {
+        GD.Print("Handling Operator...");
+
+        if (op == "C")
+        {
+            screen.Text = "0";
+            firstNumber = 0;
+            theOperator = "";
+        }
+        else if (op == "=")
+        {
+            secondNumber = float.Parse(screen.Text);
+            theOperator = "";
+        }
+        else
+        {
+            firstNumber = float.Parse(screen.Text);
+            theOperator = op;
+        }
+    }
+    private void HandleNumber()
+    {
+        GD.Print("Handling Number...");
+    }
     private void TheCalculation()
     {
         float result = 0;

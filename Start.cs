@@ -65,7 +65,6 @@ public partial class Start : Control
         if (theText == "+" || theText == "-" || theText == "*" || theText == "/" || theText == "C" || theText == "=")
         {
             HandleOperator(theText);
-            HandleNumber(theText);
             //isOperator = true;
         }
         else
@@ -77,7 +76,9 @@ public partial class Start : Control
     string theInput = "";
     private void HandleNumber(string isNumber) // Handles number (0 to 9) and also decimal points
     {
-        if (isNumber == "+" || isNumber == "-" || isNumber == "*" || isNumber == "/" || isNumber == "C" || isNumber == "=")
+        theInput += isNumber;
+        screen.Text = theInput;
+        /*if (isNumber == "+" || isNumber == "-" || isNumber == "*" || isNumber == "/" || isNumber == "C" || isNumber == "=")
         {
             if (firstNumber != 0)
             {
@@ -91,7 +92,7 @@ public partial class Start : Control
         else
         {
             theInput += isNumber;
-        }
+        }*/
     }
     private void HandleOperator(string op)
     {
@@ -101,26 +102,26 @@ public partial class Start : Control
             firstNumber = 0;
             secondNumber = 0;
             theOperator = "";
-        }
-        else if (op == "+")
-        {
-            screen.Text = firstNumber.ToString() + "+";
-        }
-        else if (op == "-")
-        {
-            screen.Text = firstNumber.ToString() + "-";
-        }
-        else if (op == "*")
-        {
-            screen.Text = firstNumber.ToString() + "*";
-        }
-        else if (op == "/")
-        {
-            screen.Text = firstNumber.ToString() + "/";
+            theInput = "";
         }
         else if (op == "=")
         {
+            if (theInput != "")
+            {
+                secondNumber = float.Parse(theInput);
+            }
             TheCalculation();
+            theInput = "";
+        }
+        else
+        {
+            if (theInput != "")
+            {
+                firstNumber = float.Parse(theInput);
+            }
+            theOperator = op;
+            theInput = "";
+            screen.Text = "0";
         }
         
     }
@@ -139,7 +140,15 @@ public partial class Start : Control
                 result = firstNumber * secondNumber;
                 break;
             case "/":
-                result = firstNumber / secondNumber;
+                if (secondNumber != 0)
+                {
+                    result = firstNumber / secondNumber;
+                }
+                else
+                {
+                    result = 0;
+                }
+                // result = firstNumber / secondNumber;
                 break;
         }
         screen.Text = result.ToString();

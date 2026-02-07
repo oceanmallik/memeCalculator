@@ -1,18 +1,17 @@
 using Godot;
-using System;
 
 public partial class Start : Control
 {
-	private string theOperator = "";
-	private float firstNumber = 0;
-	private float secondNumber = 0;
+    private string theOperator = "";
+    private float firstNumber = 0;
+    private float secondNumber = 0;
 
     private Label screen;
 
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-		GD.Print("Engine Has Started! ");
+    // Called when the node enters the scene tree for the first time.
+    public override void _Ready()
+    {
+        GD.Print("Engine Has Started! ");
 
         // Connecting screen node to screen label, lmao :')
         screen = GetNode<Label>("VBoxContainer/Screen");
@@ -57,8 +56,8 @@ public partial class Start : Control
         equal.Pressed += () => ButtonPressed(equal);
         dot.Pressed += () => ButtonPressed(dot);
         clear.Pressed += () => ButtonPressed(clear);
-	}
-
+    }
+    //private bool isOperator = false;
     private void ButtonPressed(Button Button)
     {
         string theText = Button.Text;
@@ -66,36 +65,64 @@ public partial class Start : Control
         if (theText == "+" || theText == "-" || theText == "*" || theText == "/" || theText == "C" || theText == "=")
         {
             HandleOperator(theText);
+            HandleNumber(theText);
+            //isOperator = true;
         }
         else
         {
             HandleNumber(theText);
+            //isOperator = false;
+        }
+    }
+    string theInput = "";
+    private void HandleNumber(string isNumber) // Handles number (0 to 9) and also decimal points
+    {
+        if (isNumber == "+" || isNumber == "-" || isNumber == "*" || isNumber == "/" || isNumber == "C" || isNumber == "=")
+        {
+            if (firstNumber != 0)
+            {
+                firstNumber = float.Parse(theInput);
+            }
+            else
+            {
+                secondNumber = float.Parse(theInput);
+            }
+        }
+        else
+        {
+            theInput += isNumber;
         }
     }
     private void HandleOperator(string op)
     {
-        GD.Print("Handling Operator...");
-
         if (op == "C")
         {
             screen.Text = "0";
             firstNumber = 0;
+            secondNumber = 0;
             theOperator = "";
+        }
+        else if (op == "+")
+        {
+            screen.Text = firstNumber.ToString() + "+";
+        }
+        else if (op == "-")
+        {
+            screen.Text = firstNumber.ToString() + "-";
+        }
+        else if (op == "*")
+        {
+            screen.Text = firstNumber.ToString() + "*";
+        }
+        else if (op == "/")
+        {
+            screen.Text = firstNumber.ToString() + "/";
         }
         else if (op == "=")
         {
-            secondNumber = float.Parse(screen.Text);
-            theOperator = "";
+            TheCalculation();
         }
-        else
-        {
-            firstNumber = float.Parse(screen.Text);
-            theOperator = op;
-        }
-    }
-    private void HandleNumber()
-    {
-        GD.Print("Handling Number...");
+        
     }
     private void TheCalculation()
     {
@@ -115,9 +142,10 @@ public partial class Start : Control
                 result = firstNumber / secondNumber;
                 break;
         }
+        screen.Text = result.ToString();
     }
     // Called every frame. 'delta' is the elapsed time since the previous frame.
     public override void _Process(double delta)
-	{
-	}
+    {
+    }
 }

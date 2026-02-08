@@ -114,6 +114,15 @@ public partial class Start : Control
         {
             case "+":
                 result = firstNumber + secondNumber;
+                // The meme part
+                if (result == 4)
+                {
+                    result = 5;
+                }
+                if (firstNumber == 9 || secondNumber == 10)
+                {
+                    result = 21;
+                }
                 break;
             case "-":
                 result = firstNumber - secondNumber;
@@ -130,7 +139,6 @@ public partial class Start : Control
                 {
                     result = 0;
                 }
-                // result = firstNumber / secondNumber;
                 break;
         }
         screen.Text = result.ToString();

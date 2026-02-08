@@ -57,7 +57,6 @@ public partial class Start : Control
         dot.Pressed += () => ButtonPressed(dot);
         clear.Pressed += () => ButtonPressed(clear);
     }
-    //private bool isOperator = false;
     private void ButtonPressed(Button Button)
     {
         string theText = Button.Text;
@@ -65,12 +64,10 @@ public partial class Start : Control
         if (theText == "+" || theText == "-" || theText == "*" || theText == "/" || theText == "C" || theText == "=")
         {
             HandleOperator(theText);
-            //isOperator = true;
         }
         else
         {
             HandleNumber(theText);
-            //isOperator = false;
         }
     }
     string theInput = "";
@@ -78,21 +75,6 @@ public partial class Start : Control
     {
         theInput += isNumber;
         screen.Text = theInput;
-        /*if (isNumber == "+" || isNumber == "-" || isNumber == "*" || isNumber == "/" || isNumber == "C" || isNumber == "=")
-        {
-            if (firstNumber != 0)
-            {
-                firstNumber = float.Parse(theInput);
-            }
-            else
-            {
-                secondNumber = float.Parse(theInput);
-            }
-        }
-        else
-        {
-            theInput += isNumber;
-        }*/
     }
     private void HandleOperator(string op)
     {

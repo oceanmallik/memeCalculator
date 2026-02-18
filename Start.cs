@@ -123,6 +123,10 @@ public partial class Start : Control
                 {
                     result = 21;
                 }
+                if (firstNumber == 1 || secondNumber == 1)
+                {
+                    result = 11;
+                }
                 break;
             case "-":
                 result = firstNumber - secondNumber;
